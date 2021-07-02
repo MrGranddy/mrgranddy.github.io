@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Game of Life</title>
+  <script language="javascript" type="text/javascript" src="lib/p5.min.js"></script>
+  <script language="javascript" src="lib/p5.dom.min.js"></script>
+  <!--script language="javascript" src="lib/p5.sound.min.js"></script-->
+  <style>
+    body.gol{
+      background: url(backgrounds/grunge_alpha_150.png) repeat center 0 fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color: #444444;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      min-height: 100%;
+    }
+    .important{
+      color: rgba(0,0,0,0.7);
+      font-weight: bold;
+      font-size: 20px;
+    }
+    div.youtube{
+      margin-top: 20px;
+      width: 100%;
+    }
+    div.youtube iframe{
+      margin: auto;
+      display:block;
+    }
+    div#game{
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    div.instructions{
+      text-align: center;
+      font-size: 12px;
+      font-family: Arial;
+      color: rgb(91, 70, 45);
+    }
+    button#startbutton{
+      font-size: 20px;
+      font-weight: bold;
+      color: rgba(0,0,0,0.7);
+      background-color: rgb(91, 70, 45);
+      border-color: black;
+    }
+  </style>
+</head>
+
+<body class="gol">
+
+<div class="youtube">
+<iframe width="300" height="150" src="https://www.youtube.com/embed/0THu1FExdek?autoplay=1&loop=1&list=PLInwC74ED_SPLTHTGyLssmPqLYER9Bp2A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<div id="game">
+<script language="javascript" type="text/javascript" src="work/game_of_life.js"></script>
+</div>
+
+<div class="instructions">
+  <h1> First draw on the grid with <span class="important">LEFT CLICK</span>. </h1>
+  <h1> Then press <span class="important">ENTER</span> to start the game OR press <button id="startbutton">HERE!</button> </h1>
+  <h1> Press <span class="important">BACKSPACE</span> to reset. </h1>
+</div>
+
+</body>
+</html>

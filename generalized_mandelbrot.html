@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>Generalized Mandelbrot Set</title>
+  <script language="javascript" type="text/javascript" src="lib/p5.min.js"></script>
+  <script language="javascript" src="lib/p5.dom.min.js"></script>
+  <!--script language="javascript" src="lib/p5.sound.min.js"></script-->
+  <style>
+
+    body.generalizedmandelbrot{
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color: #FFFFFF;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      min-height: 100%;
+    }
+
+    body.generalizedmandelbrot p{
+        font-family: Arial;
+        font-size: 24;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    div#animation{
+    	height: 100%;
+    	width: 100%;
+    }
+
+    div#startbutton{
+        margin-top: 20px;
+        text-align: center;
+        font-family: Arial;
+    }
+
+    div#startbutton button{
+        font-size: 24px;
+    }
+
+    div#rulebox{
+        margin-top: 20px;
+        text-align: center;
+        font-family: Arial;
+    }
+
+    div#rulebox input{
+        font-size: 24px;
+        text-align: center;
+    }
+
+  </style>
+</head>
+
+<body class="generalizedmandelbrot">
+<!--p>Please enter a number here, :</p-->
+<!--div id="rulebox"> <input type="text" id="rule" value=30>  </div-->
+<!--div id="startbutton"> <button id="start">Start!</button> </div-->
+<div id="animation">
+<script language="javascript" type="text/javascript" src="work/generalized_mandelbrot.js"></script>
+</div>
+</body>
+</html>

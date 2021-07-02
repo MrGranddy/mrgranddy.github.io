@@ -1,0 +1,173 @@
+body.index{ 
+  background: url(backgrounds/jupiter_alpha_150.png) no-repeat center 0 fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #444444;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  min-height: 100%;
+}
+
+body.about_me{
+  background: url(backgrounds/mars_alpha_150.png) no-repeat center 0 fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #444444;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  min-height: 100%;
+}
+
+div.outer{
+  margin-top: 25%;
+  width: 100%;
+  text-align: center;
+  background-color: #666666;
+  border-color: #333333;
+  border-style: solid;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  box-shadow: 3px 3px 2px black;
+}
+
+div.inner{
+  width: 80%;
+  height: 100%;
+  vertical-align: middle;
+  background-color: #777777;
+  display: table;
+  table-layout: fixed;
+  margin: 0 auto;
+  padding: 0;
+  border-style: solid;
+  border-color: #000000;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
+
+div.inner a{
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  font-family: "Arial", Sans-serif;
+  font-size: 1.23em;
+  color: #000000;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+
+div.inner a:hover{
+  background-color: #222222;
+  font-size: 1.25em;
+  text-shadow: 0px 0px 0.5px #FFFFFF;
+  font-weight: bold;
+  color: #CCCCCC;
+}
+
+div.social_bar{
+  margin-top: 1%;
+  box-shadow: 3px 3px 2px #111111;
+  background-color: rgba(200, 200, 200, 0.4);
+  border-style: solid;
+  border-color: #000000;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  width: 100%;
+  display: inline-block
+}
+
+div.social_bar table{
+  float: right;
+  border-collapse: collapse;
+  height: 100%;
+}
+div.social_bar td{
+	height: 48px;
+	width: 48px;
+}
+
+div.social_bar td#space{
+	background-color: transparent;
+	width: 30px;
+	height: 48px;
+}
+
+div.social_bar a
+{
+    display:block;
+    text-decoration:none;
+    height: 100%;
+}
+
+div.social_bar td#facebook{
+  background-image: url("soc_icons/facebook.png");
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+}
+div.social_bar td#github{
+  background-image: url("soc_icons/github.png");
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+}
+div.social_bar td#linkedin{
+  background-image: url("soc_icons/linkedin.png");
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+}
+div.social_bar td#twitter{
+  background-image: url("soc_icons/twitter.png");
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+}
+
+div.content{
+	background-color: rgba(60,60,60,0.5);
+	width: 80%;
+	min-height: 40em;
+	display: inline-block;
+	margin-top: 5%;
+	margin-right: 10%;
+	margin-left: 10%;
+	border-width: 5px;
+	border-color: rgba(255,255,255,0.5);
+	border-style: solid;
+}
+
+div.content div#about{
+  background-color: rgba(150,150,150,0.8);
+  margin-top: 5%;
+  width: 100%;
+	min-height: 90%;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}

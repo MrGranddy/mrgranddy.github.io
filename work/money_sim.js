@@ -18,30 +18,12 @@ function rand_pix() {
   return Math.floor(Math.random() * 256);
 }
 
-
-
-
-
 function find_idx_from_id(id){
   for( var i = 0; i < people_list.length; i++ ){
     if( people_list[i].id == id ){
       return i;
     }
   }
-}
-
-function find_min_max_money(){
-  var min_money = 999999999999;
-  var max_money = -1;
-  for( var i = 0; i < people_list.length; i++ ){
-    if( people_list[i].money > max_money ){
-      max_money = people_list[i].money;
-    }
-    if( people_list[i].money < min_money ){
-      min_money = people_list[i].money;
-    }
-  }
-  return [min_money, max_money];
 }
 
 class Person {
@@ -52,10 +34,18 @@ class Person {
     this.money_manage = Math.random() / 2;
     this.money = initial_money;
 
-    this.hue = rand_pix();
-    this.saturation = Math.floor(this.money_manage * 400) + 56;
-    this.brightness = 0;
+    var sel_color = Math.floor(Math.random() * 3);
+    var color_list = [];
 
+    for (var i = 0; i < 3; i++) {
+      if (i === sel_color) {
+        color_list[i] = this.money_manage * 400 + 55;
+      } else {
+        color_list[i] = 0;
+      }
+    }
+
+    this.color = color(color_list[0], color_list[1], color_list[2]);
     this.id = id;
 
   }
@@ -87,12 +77,7 @@ function draw_cells() {
   stroke(0, 0, 0);
   
   for( var i = 0; i < people_list.length; i++ ){
-
-    var hue = people_list[i].hue;
-    var sat = people_list[i].saturation;
-    var bri = people_list[i].brightness;
-
-    fill( color(hue, sat, bri) );
+    fill( people_list[i].color );
     for( var j = 0; j < people_list[i].cell_list.length; j++ ){
       rect(  people_list[i].cell_list[j][1] * cell_len, 
              people_list[i].cell_list[j][0] * cell_len,
@@ -158,30 +143,16 @@ function iterate_people(){
     
   }
   
-  var new_people_list = [];
-
   for( let p_idx = 0; p_idx < people_list.length; p_idx++ ){
-    if( people_list[p_idx].cell_list.length != 0 ){
-      new_people_list.push(people_list[p_idx]);
+    if( people_list[p_idx].cell_list.length == 0 ){
+      people_list.splice(p_idx, 1);
+      p_idx -= 1;
     }
   }
-
-  people_list = new_people_list;
-
-  [min_money, max_money] = find_min_max_money();
-  diff = max_money - min_money;
-
-  for( let p_idx = 0; p_idx < people_list.length; p_idx++ ){
-    var normalized_money = (people_list[p_idx].money - min_money) / diff;
-    people_list[p_idx].brightness = Math.floor(200 * normalized_money) + 56;
-  }
-
   
 }
 
 function setup() {
-
-  colorMode(HSB, 255);
 
   people_list = [];
   own_map = [];
@@ -205,9 +176,6 @@ function setup() {
 
 
 function draw() {
-  if( people_list.length <= 1 ){
-    noLoop();
-  }
   background(155, 155, 155);
   draw_cells();
   iterate_people();
