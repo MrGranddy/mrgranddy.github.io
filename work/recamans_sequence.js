@@ -65,6 +65,4 @@ function draw(){
         ellipse(middle * ratio, height/2, diameter * ratio, diameter * ratio);
     }
 
-    console.log(sequence.length)
-
 }
